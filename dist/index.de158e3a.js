@@ -1,53 +1,56 @@
 document.addEventListener("DOMContentLoaded", init);
 async function init() {
-    const select = document.querySelector("#countOfPosts");
-    let countOfPostsRequest = Number(select.value);
+    const countOfPostsList = document.querySelector("#countOfPosts");
     const searchInput = document.querySelector("#search");
     const searchStatus = document.querySelector(".search_status");
     const progressBar = document.querySelector(".progress");
     const postsList = document.querySelector("#posts");
     showProgress(true);
-    let posts = await getPosts(countOfPostsRequest);
+    let posts = await getPosts();
     renderPost(posts);
     attachEvents();
     async function getPosts(countOfPosts = 10) {
+        countOfPosts = Number(countOfPostsList.value);
         let posts = [];
-        // showProgress(true);
         try {
             const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${countOfPosts}`);
             posts = await response.json();
         } catch (e) {
             console.log("Error");
-        } finally{
-            showProgress(false);
-        }
+        } finally{}
         return posts;
     }
     function renderPost(posts) {
-        postsList.innerHTML = null;
         showProgress(false);
+        postsList.innerHTML = null;
         if (!posts.length) searchResultEmpty("Совпадений не найдено!");
         posts.forEach((el, idx)=>{
             postsList.appendChild(createPostElement(idx, el?.title));
         });
     }
     function attachEvents() {
-        searchInput.addEventListener("keydown", startSearchByKeypress);
-        select.addEventListener("change", reload);
+        searchInput.addEventListener("keyup", startSearcher);
+        countOfPostsList.addEventListener("change", reload);
     }
-    function startSearchByKeypress(e) {
-        if (event.key == "Enter") {
-            const searchRequest = this.value.toLowerCase().trim();
-            setTimeout(()=>{
-                searchPost(searchRequest);
-            }, 500);
-        } else if (event.key === "Backspace" && this.value.length === 1) renderPost(posts);
+    function startSearcher(event) {
+        switch(event.key){
+            case "Enter":
+                setTimeout(()=>{
+                    searchPost(posts);
+                }, 500);
+                break;
+            case "Backspace":
+                if (!event.target.value) renderPost(posts);
+                break;
+        }
     }
     async function reload() {
-        posts = await getPosts(Number(document.querySelector("#countOfPosts").value));
+        posts = await getPosts(Number(countOfPostsList.value));
         renderPost(posts);
+        searchPost(posts);
     }
-    function searchPost(searchRequest) {
+    function searchPost(posts) {
+        const searchRequest = searchInput.value.toLowerCase().trim();
         searchStatus.innerHTML = null;
         showProgress(true);
         const searchResult = searchRequest ? posts.filter(({ title })=>title.toLowerCase().trim().includes(searchRequest)) : posts;
