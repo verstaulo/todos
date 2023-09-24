@@ -74,7 +74,7 @@ async function init(){
     }
     function createPostElement(idx, title) {
         const post = document.createElement('li');
-        post.classList.add('collection-item', 'hoverable', 'blue', 'lighten-5');
+        post.classList.add('row', 'col', 'hoverable', 'blue', 'lighten-5');
         post.textContent = `${idx + 1} - ${title}`;
         return post;
     }

@@ -2,6 +2,11 @@
   height: 1rem;
 }
 
+.col {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
 #countOfPosts {
   display: block;
 }

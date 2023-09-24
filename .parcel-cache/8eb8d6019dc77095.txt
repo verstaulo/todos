@@ -1,6 +1,6 @@
 5974
 45/home/myltik/Projects/todo-project/.gitignore1695311487057461503 0
-57/home/myltik/Projects/todo-project/dist/index.de158e3a.js1695379483071203892 0
+57/home/myltik/Projects/todo-project/dist/index.de158e3a.js1695383663741697125 0
 68/home/myltik/Projects/todo-project/dist/todo-project.59712999.js.map1695379087381364292 0
 62/home/myltik/Projects/todo-project/dist/index.af20ad6e.css.map1695379087376364219 0
 58/home/myltik/Projects/todo-project/dist/index.767348b1.css1695379087376364219 0
@@ -8,9 +8,9 @@
 50/home/myltik/Projects/todo-project/dist/index.html1695379087364364042 0
 58/home/myltik/Projects/todo-project/dist/index.b1a37fb5.css1695379087364364042 0
 58/home/myltik/Projects/todo-project/dist/index.ce803a3e.css1695143468169783021 0
-39/home/myltik/Projects/todo-project/dist1695379483074203936 1
+39/home/myltik/Projects/todo-project/dist1695383663742697140 1
 49/home/myltik/Projects/todo-project/src/index.html1695232073734160888 0
-38/home/myltik/Projects/todo-project/src1695379482985202623 1
+38/home/myltik/Projects/todo-project/src1695383663613695244 1
 52/home/myltik/Projects/todo-project/package-lock.json1695143499957249521 0
 74/home/myltik/Projects/todo-project/node_modules/reset-css/sass/_reset.scss1695143499867248200 0
 62/home/myltik/Projects/todo-project/node_modules/reset-css/sass1695143499866248186 1
@@ -1501,7 +1501,7 @@
 84/home/myltik/Projects/todo-project/node_modules/caniuse-lite/data/features/beacon.js1695143002340937258 0
 69/home/myltik/Projects/todo-project/node_modules/@parcel/types/LICENSE1695143001955931600 0
 88/home/myltik/Projects/todo-project/node_modules/css-tree/cjs/syntax/node/Parentheses.cjs1695143002420938434 0
-46/home/myltik/Projects/todo-project/src/main.js1695379482983202593 0
+46/home/myltik/Projects/todo-project/src/main.js1695383663612695229 0
 72/home/myltik/Projects/todo-project/node_modules/@parcel/reporter-cli/lib1695143002209935333 1
 74/home/myltik/Projects/todo-project/node_modules/css-tree/cjs/utils/url.cjs1695143002456938963 0
 86/home/myltik/Projects/todo-project/node_modules/@parcel/core/test/fixtures/module-a.js1695143002461939036 0
@@ -4201,7 +4201,7 @@
 116/home/myltik/Projects/todo-project/node_modules/@parcel/optimizer-svgo/node_modules/svgo/plugins/convertTransform.js1695143002255936009 0
 108/home/myltik/Projects/todo-project/node_modules/@swc/helpers/cjs/_class_static_private_field_destructure.cjs1695143002223935539 0
 74/home/myltik/Projects/todo-project/node_modules/msgpackr/dist/index.min.js1695143002220935495 0
-61/home/myltik/Projects/todo-project/dist/index.de158e3a.js.map1695379483074203936 0
+61/home/myltik/Projects/todo-project/dist/index.de158e3a.js.map1695383663742697140 0
 73/home/myltik/Projects/todo-project/node_modules/node-addon-api/napi-inl.h1695143002149934451 0
 77/home/myltik/Projects/todo-project/node_modules/@parcel/runtime-react-refresh1695143002015932482 1
 74/home/myltik/Projects/todo-project/node_modules/msgpackr/dist/index.js.map1695143002346937346 0
@@ -4928,7 +4928,7 @@
 69/home/myltik/Projects/todo-project/node_modules/get-port/package.json1695143001956931615 0
 79/home/myltik/Projects/todo-project/node_modules/caniuse-lite/data/regions/DZ.js1695143002569940623 0
 57/home/myltik/Projects/todo-project/node_modules/svgo/dist1695143002351937420 1
-54/home/myltik/Projects/todo-project/.idea/workspace.xml1695380097282267855 0
+54/home/myltik/Projects/todo-project/.idea/workspace.xml1695577672626073943 0
 97/home/myltik/Projects/todo-project/node_modules/caniuse-lite/data/features/css-relative-colors.js1695143002516939845 0
 65/home/myltik/Projects/todo-project/node_modules/dotenv-expand/lib1695143002029932688 1
 120/home/myltik/Projects/todo-project/node_modules/@parcel/optimizer-svgo/node_modules/css-tree/lib/syntax/config/walker.js1695143002496939551 0
@@ -4972,7 +4972,7 @@
 102/home/myltik/Projects/todo-project/node_modules/css-select/node_modules/entities/lib/esm/decode.js.map1695143002291936538 0
 89/home/myltik/Projects/todo-project/node_modules/caniuse-lite/data/features/css3-colors.js1695143002540940197 0
 95/home/myltik/Projects/todo-project/node_modules/caniuse-lite/data/features/css3-cursors-grab.js1695143002540940197 0
-40/home/myltik/Projects/todo-project/.idea1695380097283267870 1
+40/home/myltik/Projects/todo-project/.idea1695577672627073958 1
 96/home/myltik/Projects/todo-project/node_modules/caniuse-lite/data/features/css3-cursors-newer.js1695143002541940212 0
 86/home/myltik/Projects/todo-project/node_modules/css-tree/lib/generator/token-before.js1695143002573940682 0
 90/home/myltik/Projects/todo-project/node_modules/caniuse-lite/data/features/css3-cursors.js1695143002541940212 0
