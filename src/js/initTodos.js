@@ -1,12 +1,10 @@
-document.addEventListener('DOMContentLoaded', init);
 
-async function init(){
+export async function initTodos(){
     const countOfPostsList = document.querySelector('#countOfPosts');
     const searchInput = document.querySelector('#search');
     const searchStatus = document.querySelector(".search_status");
     const progressBar = document.querySelector(".progress");
     const postsList = document.querySelector("#posts");
-
     showProgress(true);
     let posts = await getPosts();
     renderPost(posts);
@@ -16,7 +14,7 @@ async function init(){
         let posts = [];
         try {
             const response = await fetch(
-                `https://jsonplaceholder.typicode.com/posts?_limit=${countOfPosts}`
+                `https://jsonplaceholder.typicode.com/posts?_limit=${countOfPosts}&_start=2`
             );
             posts = await response.json();
         } catch (e) {
@@ -46,21 +44,22 @@ async function init(){
                 setTimeout(()=>{
                     searchPost(posts);
                 },500)
-            break;
+                break;
 
             case "Backspace" :
                 if(!event.target.value) {
                     renderPost(posts);
                 }
-            break;
+                break;
         }
     }
 
     async function reload() {
-        posts = await getPosts(Number(countOfPostsList.value));
+        posts = await getPosts(countOfPostsList.value);
         renderPost(posts);
         searchPost(posts);
     }
+
     function searchPost(posts) {
         const searchRequest = searchInput.value.toLowerCase().trim();
         searchStatus.innerHTML = null;
